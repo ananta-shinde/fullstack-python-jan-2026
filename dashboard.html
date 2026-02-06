@@ -10,66 +10,88 @@
             margin: 0;
             padding: 0;
         }
-        .w-20{
-            width: 20%;
-            
-        }
-        .w-30{
-            width: 30%;
-            
-        }
 
-        .bg-black{
-            background-color: black;
-            color: white;
-        }
-        .w-80{
-            width: 80%;
-        }
+
         .d-flex{
             display: flex;
-            height: 100vh;
-            
         }
-        ul{
-           list-style-type: none;
-           display: flex; 
-        }
-
-        .justify-content-around{
-            justify-content: space-around;
-        }
-
-
-
-        nav{
-            display: flex;
+       .justify-content-between{
             justify-content: space-between;
-            padding: 1rem 50px;
-            border: 1px solid rgb(111, 112, 112);
-        }
+       }
+       .justify-content-around{
+         justify-content: space-around;
+       }
+       .align-items-center{
+         align-items: center;
+       }
 
 
+
+       .list-unstyled{
+          list-style-type: none;
+       }
+
+
+       .w-20{
+            width: 20%;
+       }
+       .w-30{
+          width:30%
+       }
+       .w-75{
+          width: 75%;
+       }
+       .w-80{
+         width: 80%;
+       }
+
+
+       .p-1{
+            padding: 2%;
+       }
+
+       .bg-light-gray{
+            background-color: #D3D3D3;
+       }
+
+       #sidenav li{
+             padding: 2% 5%;
+       }
+      
 
     </style>
 </head>
 <body>
-    <section class="d-flex">
-        <div class="w-20 bg-black">sidenav</div>
-        <div class="w-80">
-            <nav>
-                <ul class="w-20 justify-content-around">
-                    <li><i class="bi bi-arrow-right"></i></li>
-                    <li><i class="bi bi-plus-circle-fill"></i></li>
-                    <li><button>Mega menu</button></li>
-                </ul>
-                <ul class="w-30 justify-content-around">
-                    <li>arraow</li>
-                    <li>add</li>
-                    <li><button>Mega menu</button></li>
-                </ul>
-            </nav>
+    <nav class="d-flex justify-content-between align-items-center p-1">
+        <div class="d-flex w-30 align-items-center">
+            <h2>Logo</h2>
+            <ul class="list-unstyled d-flex w-75 justify-content-around">
+                <li>Calendar</li>
+                <li>Message</li>
+                <li>Social</li>
+                <li>Chat</li>
+            </ul>
         </div>
+        <ul class="list-unstyled d-flex w-30 justify-content-around">
+            <li>Refesh</li>
+            <li>Settings</li>
+            <li>Notification</li>
+            <li>profile</li>
+        </ul>
+    </nav>
+    <section  class="d-flex" style="height: 100vh;">
+        <div id="sidenav" class="w-20">
+            <ul class="list-unstyled">
+                <li>Home</li>
+                <li>Products</li>
+                <li>Carts</li>
+                <li>Orders</li>
+                <li>Notification</li>
+                <li>Demos</li>
+            </ul>
+        </div>
+        <div class="w-80 bg-light-gray"></div>
     </section>
+   
 </body>
 </html>
