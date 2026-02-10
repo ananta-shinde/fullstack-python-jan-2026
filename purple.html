@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w-20{
+            width: 20%;
+        }
+        .w-80{
+            width: 80%;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .logo{
+            width: 150px;
+        }
+        .list-unstyled{
+            list-style-type: none;
+        }
+        .justify-content-between{
+            justify-content: space-between;
+        }
+        .align-items-center{
+           align-items: center;
+        }
+        nav li{
+            margin: 0 10px;
+        }
+        nav{
+            padding: 10px 20px;
+        }
+        .sidenav li{
+            margin: 10px 0;
+        }
+        .bg-grey{
+            background-color:#f2edf3;
+        }
+        .bg-orange{
+            background-color: orange;
+        }
+        .card{
+            /* height: ; */
+            padding: 20px;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 25px;
+            row-gap: 25px;
+            margin: 30px 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="d-flex align-items-center">
+        <div class="w-20">
+            <img class="logo" src="https://demo.bootstrapdash.com/purple-admin-free/dist/themes/assets/images/logo.svg" alt="">
+        </div>
+        <div class="w-80 d-flex justify-content-between">
+            <ul class="list-unstyled d-flex">
+                <li>Hamberger</li>
+                <li><input type="text"></li>
+            </ul>
+            <ul class="list-unstyled d-flex">
+                 <li>profile</li>
+                 <li>messages</li>
+                 <li>Notification</li>
+            </ul>
+        </div>
+    </nav>
+    <section class="d-flex" style="height: 100vh;">
+        <div class="w-20 sidenav">
+            <ul class="list-unstyled">
+                <li>Dashboard</li>
+                <li>Dashboard</li>
+                <li>Dashboard</li>
+                <li>Dashboard</li>
+                <li>Dashboard</li>
+                <li>Dashboard</li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+        <div class="w-80 bg-grey">
+           <div class="content">
+                <div class="card bg-orange">
+                    <h3>Weekly sales</h3>
+                    <h1>$150000</h1>
+                </div>
+                <div class="card bg-orange">
+                    <h3>Weekly sales</h3>
+                    <h1>$150000</h1>
+                </div>
+                <div class="card bg-orange">
+                    <h3>Weekly sales</h3>
+                    <h1>$150000</h1>
+                </div>
+                <div class="card bg-orange" style="grid-column: 1/3;">
+                    <h3>Weekly sales</h3>
+                    <h1>$150000</h1>
+                </div>
+                <div class="card bg-orange">
+                    <h3>Weekly sales</h3>
+                    <h1>$150000</h1>
+                </div>
+                <div class="card bg-orange" style="grid-column: 1/4;">
+                    <h3>Weekly sales</h3>
+                    <h1>$150000</h1>
+                </div>
+                
+           </div>
+        </div>
+    </section>
+</body>
+</html>
