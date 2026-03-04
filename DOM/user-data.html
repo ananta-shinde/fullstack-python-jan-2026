@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id="welcome-message"></h1>
+    <p id="demo">changed message</p>
+    <p id="email"> </p>
+</body>
+<script>
+    const data =new URLSearchParams(window.location.search)
+    // console.log(data.get("firstName"))
+    // console.log(data.get("lastName"))
+    // console.log(data.get("email"))
+    // console.log(data.get("address"))
+    console.log(document.getElementById("demo").innerHTML)
+    document.getElementById("welcome-message").innerHTML = "welcome "+data.get("firstName")+", Registration done successfully"
+    document.getElementById("email").append("email: "+data.get("email"))
+    document.getElementById("email").append(" address: "+data.get("address"))
+</script>
+</html>

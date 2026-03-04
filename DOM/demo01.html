@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title id="title">Document</title>
+</head>
+<body>
+    <h2>this is my heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro hic voluptatibus ullam nisi voluptates dolore quasi veritatis ex, ad iure tempore inventore quibusdam facilis perferendis aperiam maxime error quisquam cupiditate.</p>
+    <p id="second" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro hic voluptatibus ullam nisi voluptates dolore quasi veritatis ex, ad iure tempore inventore quibusdam facilis perferendis aperiam maxime error quisquam cupiditate.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro hic voluptatibus ullam nisi voluptates dolore quasi veritatis ex, ad iure tempore inventore quibusdam facilis perferendis aperiam maxime error quisquam cupiditate.</p>
+     <button onclick="updatePara()">update para</button>
+     <button onclick="updateColor()">update Style</button>
+    <script>
+     
+     function updatePara(){
+        document.getElementById("second").innerHTML = "this is second para."
+        
+     }
+
+     function updateColor(){
+        document.getElementsByTagName("p")[0].style.color = "green"
+        document.getElementsByTagName("p")[1].style.color = "green"
+        document.getElementsByTagName("p")[2].style.color = "green"
+        document.getElementsByTagName("p")[2].style.backgroundColor = "yellow"
+     }  
+    </script>
+</body>
+
+</html>
