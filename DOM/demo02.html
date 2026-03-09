@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Demos</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2 id="first-heading"></h2>
+    <h2>Hello changed heading</h2>
+    <p id="first-para"></p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>second list</li>
+    </ul>
+    <h1></h1>
+</body>
+<script>
+    var heading1 = document.getElementById("first-heading")
+    heading1.innerHTML = "Hello from JS"
+    heading1.style.backgroundColor = "#F5F5F5"
+    heading1.style.color = "red"
+    heading1.style.padding = "10px"
+
+    var headings = document.getElementsByTagName("h2")
+    headings[0].innerHTML = "Another message"
+    console.log(heading1)
+    console.log(headings[0])
+
+    var para1 = document.getElementById("first-para")
+    para1.innerHTML = "This is my first para"
+
+    var listItems = document.getElementsByTagName("li")
+    listItems[0].innerHTML = "first item"
+    listItems[1].innerHTML = "second item"
+    listItems[2].innerHTML = "third item"
+
+    var list = document.getElementsByTagName("ul")
+    list[0].style.listStyleType = "none"
+    
+    list[1].style.listStyleType = "none"
+
+    list[0].style.color = "red"
+    list[1].style.color = "green"
+
+    var message = document.getElementsByTagName("h2")[1].innerHTML
+    var h1Heading = document.getElementsByTagName("h1")
+    h1Heading[0].innerHTML = message
+
+    document.getElementsByTagName("h2")[1].innerHTML = document.getElementsByTagName("p")[0].innerHTML
+
+
+</script>
+</html>
