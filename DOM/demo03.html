@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom demo2</title>
+</head>
+<body>
+    <h2>This is my heading</h2>
+    <input type="text"/>
+    <button onclick="changeColor()">submit</button>
+    <p></p>
+    <input type="text"/>
+    <button onclick="saveText()">save</button>
+</body>
+<script>
+    
+    function changeColor(){
+        var text = document.getElementsByTagName("input")[0].value 
+        document.getElementsByTagName("h2")[0].style.color = text
+    }
+
+    function saveText(){
+        // read value from input
+        var inputText =document.getElementsByTagName("input")[1].value
+        document.getElementsByTagName("p")[0].innerHTML = inputText
+    }
+
+
+    
+    
+</script>
+</html>

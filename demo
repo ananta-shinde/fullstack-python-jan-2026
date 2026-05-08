@@ -1,1 +1,13 @@
-this is old file
+create table bank(bank_id int,name varchar(100),contact varchar(10),address varchar(100));
+create table customer(cust_id int,name varchar(100),email varchar(50),contact varchar(10),address varchar(100));
+create table account(acc_no int,balance double);
+create table employee(emp_id int,name varchar(100),email varchar(50),contact varchar(10),salary double,address varchar(100));
+
+alter table bank add constraint primary key(bank_id);
+alter table account add constraint primary key(acc_no);
+alter table account add column bank_id int;
+alter table account add constraint bank_fk foreign key(bank_id) references bank(bank_id);
+
+alter table customer add constraint primary key(cust_id);
+alter table customer add column acc_no int;
+alter table customer add constraint acc_fk foreign key(acc_no) references account(acc_no);
